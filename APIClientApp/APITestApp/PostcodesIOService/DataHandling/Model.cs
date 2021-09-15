@@ -1,19 +1,19 @@
 ﻿using Newtonsoft.Json;
 
-namespace APITestApp
+namespace APITestApp.PostcodesIOService
 {
-    public class SinglePostcodeResponse
+    public class SinglePostcodeResponse : IResponse
     {
         [JsonProperty("status")]
         public int Status { get; set; }
         public Postcode result { get; set; }
     }
-    public class BulkPostcodeResponse
+    public class BulkPostcodeResponse : IResponse
     {
         public int status { get; set; }
         public Result[] @result { get; set; }
     }
-    public class OutcodeResponse
+    public class OutcodeResponse : IResponse 
     {
         public int status { get; set; }
         public OutcodeResult result { get; set; }
